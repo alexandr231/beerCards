@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/beerCards/static/css/main.56b9ae5c.css",
+    "main.js": "/beerCards/static/js/main.45a6e71b.js",
+    "static/media/beer.png": "/beerCards/static/media/beer.6b6f4b3813b7106c201a.png",
+    "static/media/notLiked.png": "/beerCards/static/media/notLiked.a86599559ec5464067f6.png",
+    "static/media/liked.png": "/beerCards/static/media/liked.420324038b8926c9de80.png",
+    "index.html": "/beerCards/index.html",
+    "main.56b9ae5c.css.map": "/beerCards/static/css/main.56b9ae5c.css.map",
+    "main.45a6e71b.js.map": "/beerCards/static/js/main.45a6e71b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56b9ae5c.css",
+    "static/js/main.45a6e71b.js"
+  ]
+}
