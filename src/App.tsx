@@ -6,9 +6,8 @@ import Header from './Components/Header/Header';
 import { fetchCards } from './Redux/slices/Card/slice';
 import { CardType, Status } from './Redux/slices/Card/types';
 import { useAppDispatch, RootState } from './Redux/store';
-import checkedIcon from './assets/img/checked.png';
-import uncheckedIcon from './assets/img/unchecked.png';
 import { Skeleton } from '@mui/material';
+import { Filtter } from './Components/Filtter';
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -31,30 +30,9 @@ const App: React.FC = () => {
 
   return (
     <div className="root">
-      <Header></Header>
+      <Header/>
       <hr></hr>
-
-      <div className="onlyLiked">
-        {showOnlyLiked ? (
-          <img
-            src={checkedIcon}
-            alt="checked"
-            onClick={() => {
-              setOnlyLiked(false);
-            }}
-          />
-        ) : (
-          <img
-            src={uncheckedIcon}
-            alt="unchecked"
-            onClick={() => {
-              setOnlyLiked(true);
-            }}
-          />
-        )}
-        <p>Show only liked</p>
-      </div>
-
+      <Filtter showOnlyLiked={showOnlyLiked} setOnlyLiked={setOnlyLiked}/>
       {loading === Status.ERROR ? (
         <div className="error">
           <h2>Error occurred😕</h2>
