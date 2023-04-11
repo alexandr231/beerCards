@@ -1,0 +1,49 @@
+body {
+  background-color: #EEE2DC;
+  font-family: 'Handlee', cursive;
+  color: #060A30;
+}
+
+.CardList {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px 10px;
+}
+
+.error {
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  margin: auto;
+}
+
+.error h2{
+  font-size: 40px;
+  margin: 50px 0px 0px 10px;
+}
+
+.error p{
+  font-size: 24px;
+  margin: 15  px 0px 0px 10px;
+}
+
+.onlyLiked {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.onlyLiked p {
+  font-size: 24px ;
+}
+
+.onlyLiked img{
+  height: 40px;
+  width: 40px;
+  margin: auto 0;
+}
