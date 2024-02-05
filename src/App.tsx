@@ -1,13 +1,13 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import './App.css';
-import { Card } from './Components/Card/Card';
-import Header from './Components/Header/Header';
-import { fetchCards } from './Redux/slices/Card/slice';
-import { CardType, Status } from './Redux/slices/Card/types';
-import { useAppDispatch, RootState } from './Redux/store';
-import { Skeleton } from '@mui/material';
-import { Filtter } from './Components/Filtter';
+import React from "react";
+import { useSelector } from "react-redux";
+import "./App.css";
+import { Card } from "./Components/Card/Card";
+import Header from "./Components/Header/Header";
+import { fetchCards } from "./Redux/slices/Card/slice";
+import { CardType, Status } from "./Redux/slices/Card/types";
+import { useAppDispatch, RootState } from "./Redux/store";
+import { Skeleton } from "@mui/material";
+import { Filtter } from "./Components/Filtter";
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -30,9 +30,9 @@ const App: React.FC = () => {
 
   return (
     <div className="root">
-      <Header/>
+      <Header />
       <hr></hr>
-      <Filtter showOnlyLiked={showOnlyLiked} setOnlyLiked={setOnlyLiked}/>
+      <Filtter showOnlyLiked={showOnlyLiked} setOnlyLiked={setOnlyLiked} />
       {loading === Status.ERROR ? (
         <div className="error">
           <h2>Error occurred😕</h2>
@@ -42,15 +42,22 @@ const App: React.FC = () => {
         <div className="CardList">
           {loading === Status.LOADING ? (
             [...new Array(9)].map((_, i) => (
-              <Skeleton variant='rectangular' width={400} height={300} sx={{
-                borderRadius: 9
-              }}></Skeleton>
+              <Skeleton
+                variant="rectangular"
+                width={400}
+                height={300}
+                sx={{
+                  borderRadius: 9,
+                }}
+              ></Skeleton>
             ))
           ) : selectedCards.length !== 0 ? (
-            selectedCards.map((card: CardType) => <Card key={card.id} {...card}></Card>)
+            selectedCards.map((card: CardType) => (
+              <Card key={card.id} {...card}></Card>
+            ))
           ) : (
             <div className="error">
-              <h2>There is no liked cards😕</h2>
+              <h2>There is no liked cards😕hahaha21312</h2>
               <p>Please like some cards and try again.</p>
             </div>
           )}
